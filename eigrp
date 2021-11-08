@@ -1,0 +1,22 @@
+r1
+router eigrp 1
+network 10.1.0.0 0.0.0.0 
+network 10.3.0.0 0.0.0.3 
+network 192.168.10.0 0.0.0.255 
+no auto-summary
+
+r3
+router eigrp 1
+network 10.1.0.0 0.0.0.0 
+network 10.2.0.0 0.0.0.3 
+network 192.168.30.0 0.0.0.255 
+network 192.168.40.0 0.0.0.255 
+no auto-summary
+
+r2 
+router eigrp 1
+network 10.2.0.0 0.0.0.0 
+network 10.3.0.0 0.0.0.3 
+network 192.168.20.0 0.0.0.255 
+network 192.168.50.0 0.0.0.255 
+no auto-summary
